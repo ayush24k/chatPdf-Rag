@@ -1,9 +1,12 @@
-import Image from "next/image";
+import FileUpload from "@/app/components/FileUpload";
 
 export default function Home() {
   return (
-    <div>
-      setup
+    <div className="flex items-center">
+      <div className="w-[30vw] min-h-screen bg-amber-200 p-2 flex justify-center items-center">
+        <FileUpload />
+      </div>
+      <div className="w-[70vw] min-h-screen bg-blue-300 p-2">chat Area</div>
     </div>
   );
 }
