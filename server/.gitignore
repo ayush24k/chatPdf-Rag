@@ -4,5 +4,7 @@ node_modules
 # production
 dist
 
+uploads
+
 # env files (can opt-in for committing if needed)
 .env*
