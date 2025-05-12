@@ -1,7 +1,7 @@
 'use client'
 import axios from "axios"
 import { useState } from "react"
-import { json } from "stream/consumers";
+import ChatBubble from "./ChatBubble";
 
 interface Doc {
     pageContent?: string;
@@ -40,15 +40,16 @@ export default function ChatArea() {
 
     return (
         <div className="p-4">
-            <div>
-                {messages.map((message, index) => {
+            <div className="flex flex-col gap-5">
+                {messages.map((msg, index) => {
                     return (
-                        <pre key={index}>{JSON.stringify(message)}</pre>
+                        <ChatBubble key={index} {...msg} />
                     )
                 })}
+
             </div>
-            <div className="fixed bottom-[28px] w-[80%]">
-                <div className="flex gap-5">
+            <div className="fixed bottom-[38px] w-[70%] ml-[80px]">
+                <div className="flex gap-5 flex-wrap">
                     <input
                         type="text"
                         placeholder="type your question here"
