@@ -1,4 +1,5 @@
 import FileUpload from "@/app/components/FileUpload";
+import ChatArea from "./components/ChatArea";
 
 export default function Home() {
   return (
@@ -6,7 +7,9 @@ export default function Home() {
       <div className="w-[30vw] min-h-screen bg-amber-200 p-2 flex justify-center items-center">
         <FileUpload />
       </div>
-      <div className="w-[70vw] min-h-screen bg-blue-300 p-2">chat Area</div>
+      <div className="w-[70vw] min-h-screen bg-blue-300 p-2">
+        <ChatArea />
+      </div>
     </div>
   );
 }

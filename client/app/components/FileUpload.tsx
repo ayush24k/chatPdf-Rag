@@ -17,7 +17,7 @@ export default function FileUpload() {
                 const formData = new FormData();
                 formData.append('pdf', file);
 
-                await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}/api/upload/pdf`, formData)
+                await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/upload/pdf`, formData)
                 console.log("file uploaded!");
             }
         })

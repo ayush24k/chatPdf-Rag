@@ -14,7 +14,7 @@ export const chatRouter = express.Router();
 
 chatRouter.get('/', async (req, res) => {
     // hardcoded
-    const userQuery = "what is this blog";
+    const userQuery:any = req.query.message;
 
     const embeddings = new OpenAIEmbeddings({
         model: "text-embedding-3-small",
