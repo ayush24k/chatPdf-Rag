@@ -12,7 +12,10 @@ const worker = new Worker(
     async (job) => {
         console.log('jobs:', job.data);
         const data = JSON.parse(job.data);
+        
         /*
+        todo:
+
         path: data.path
         read the pdf from path
         chunk the pdf
